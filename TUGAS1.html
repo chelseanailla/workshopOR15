@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CHELSEA WEBSITE</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+
+      background:
+      linear-gradient(
+      135deg,
+      #667eea,
+      #764ba2,
+      #ff6b81);
+
+      background-size:400% 400%;
+
+      animation:bgAnimation 10s ease infinite;
+
+      min-height:100vh;
+
+      color:white;
+
+      padding:30px;
+
+      transition:0.5s;
+    }
+
+    @keyframes bgAnimation{
+
+      0%{
+        background-position:0% 50%;
+      }
+
+      50%{
+        background-position:100% 50%;
+      }
+
+      100%{
+        background-position:0% 50%;
+      }
+
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    header h1{
+      font-size:50px;
+      margin-bottom:10px;
+
+      text-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    header p{
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    .card{
+
+      background:rgba(255,255,255,0.15);
+
+      backdrop-filter:blur(12px);
+
+      border:1px solid rgba(255,255,255,0.2);
+
+      border-radius:25px;
+
+      padding:35px;
+
+      margin:25px auto;
+
+      max-width:750px;
+
+      box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px) scale(1.01);
+    }
+
+    .profile-card{
+      text-align:center;
+    }
+
+    .profile-icon{
+
+      font-size:90px;
+
+      margin-bottom:20px;
+
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-10px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+
+    }
+
+    h2{
+      margin-bottom:15px;
+    }
+
+    button{
+
+      padding:13px 28px;
+
+      border:none;
+
+      border-radius:12px;
+
+      cursor:pointer;
+
+      margin-top:15px;
+
+      font-size:16px;
+
+      font-weight:bold;
+
+      background:
+      linear-gradient(
+      45deg,
+      #ff6b6b,
+      #feca57,
+      #48dbfb);
+
+      color:white;
+
+      transition:0.3s;
+    }
+
+    button:hover{
+
+      transform:scale(1.07);
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .hidden{
+      display:none;
+    }
+
+    #bioBox{
+
+      margin-top:20px;
+
+      line-height:2;
+
+      text-align:left;
+    }
+
+    .input-area{
+
+      display:flex;
+
+      gap:10px;
+
+      margin-top:20px;
+    }
+
+    input{
+
+      flex:1;
+
+      padding:13px;
+
+      border:none;
+
+      border-radius:12px;
+
+      outline:none;
+
+      font-size:15px;
+    }
+
+    ul{
+      margin-top:20px;
+    }
+
+    li{
+
+      background:rgba(255,255,255,0.2);
+
+      padding:14px;
+
+      margin-bottom:12px;
+
+      border-radius:12px;
+
+      list-style:none;
+
+      transition:0.3s;
+    }
+
+    li:hover{
+
+      transform:translateX(8px);
+
+      background:rgba(255,255,255,0.3);
+    }
+
+    footer{
+
+      text-align:center;
+
+      margin-top:50px;
+
+      opacity:0.8;
+    }
+
+    .dark-mode{
+
+      background:
+      linear-gradient(
+      135deg,
+      #141e30,
+      #243b55,
+      #000000);
+    }
+
+    .dark-mode .card{
+
+      background:rgba(0,0,0,0.4);
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:35px;
+      }
+
+      .input-area{
+        flex-direction:column;
+      }
+
+      .card{
+        padding:25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>✨ CHELSEA WEBSITE ✨</h1>
+
+    <p>
+      Front End Bootcamp - TUGAS 1
+    </p>
+
+  </header>
+
+  <!-- PROFILE -->
+
+  <section class="card profile-card">
+
+    <div class="profile-icon">
+      🌸
+    </div>
+
+    <h2 id="nama">
+      Klik Tombol Untuk Menampilkan Biodata
+    </h2>
+
+    <button id="btnBio">
+      Tampilkan Biodata
+    </button>
+
+    <div id="bioBox" class="hidden">
+
+      <p><strong>Nama :</strong> Chelsea Naila Fiorenza</p>
+
+      <p><strong>Status :</strong> Mahasiswa Matematika UNAND</p>
+
+      <p><strong>Hobi :</strong> Menonton & Jalan-Jalan</p>
+
+      <p><strong>Email :</strong> cnailafiorenza@gmail.com</p>
+
+    </div>
+
+  </section>
+
+  <!-- COLOR CHANGER -->
+
+  <section class="card">
+
+    <h2>🎨 Color </h2>
+
+    <p>
+      Klik tombol di bawah untuk mengganti warna card secara random.
+    </p>
+
+    <button id="colorBtn">
+      Ganti Warna
+    </button>
+
+  </section>
+
+  <!-- QUOTE -->
+
+  <section class="card">
+
+    <h2>📝 Quote Of The Day</h2>
+
+    <p>
+      Tambahkan quote favorit kamu di bawah ini.
+    </p>
+
+    <div class="input-area">
+
+      <input
+      type="text"
+      id="activityInput"
+      placeholder="Masukkan quote...">
+
+      <button id="addBtn">
+        Tambah
+      </button>
+
+    </div>
+
+    <ul id="activityList">
+
+      <li>✨ Never stop learning.</li>
+
+      <li>💻 Coding is creating.</li>
+
+      <li>🌸 Believe in yourself.</li>
+
+    </ul>
+
+  </section>
+
+  <!-- DARK MODE -->
+
+  <section class="card">
+
+    <h2>🌙 Dark Mode</h2>
+
+    <p>
+      Aktifkan mode gelap untuk tampilan yang lebih aesthetic.
+    </p>
+
+    <button id="darkBtn">
+      Toggle Dark Mode
+    </button>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 Chelsea Website | Front End Bootcamp
+    </p>
+
+  </footer>
+
+  <script>
+
+    // ======================
+    // FITUR 1 : BIODATA
+    // ======================
+
+    const btnBio =
+    document.getElementById("btnBio");
+
+    const bioBox =
+    document.getElementById("bioBox");
+
+    const nama =
+    document.getElementById("nama");
+
+    btnBio.addEventListener("click", function(){
+
+      bioBox.classList.toggle("hidden");
+
+      nama.innerHTML =
+      "Chelsea Naila Fiorenza";
+
+    });
+
+    // ======================
+    // FITUR 2 : GANTI WARNA
+    // ======================
+
+    const colorBtn =
+    document.getElementById("colorBtn");
+
+    colorBtn.addEventListener("click", function(){
+
+      const cards =
+      document.querySelectorAll(".card");
+
+      const colors = [
+
+      "#ff9ff3",
+      "#feca57",
+      "#48dbfb",
+      "#1dd1a1",
+      "#ff6b6b",
+      "#5f27cd",
+      "#ff7675"
+
+      ];
+
+      cards.forEach(function(card){
+
+        const randomColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+        card.style.background =
+        randomColor;
+
+      });
+
+    });
+
+    // ======================
+    // FITUR 3 : TAMBAH QUOTE
+    // ======================
+
+    const addBtn =
+    document.getElementById("addBtn");
+
+    addBtn.addEventListener("click", function(){
+
+      const input =
+      document.getElementById("activityInput");
+
+      const list =
+      document.getElementById("activityList");
+
+      if(input.value === ""){
+
+        alert("Quote tidak boleh kosong!");
+
+        return;
+      }
+
+      const li =
+      document.createElement("li");
+
+      li.textContent =
+      input.value;
+
+      list.appendChild(li);
+
+      input.value = "";
+
+    });
+
+    // ======================
+    // FITUR 4 : DARK MODE
+    // ======================
+
+    const darkBtn =
+    document.getElementById("darkBtn");
+
+    darkBtn.addEventListener("click", function(){
+
+      document.body.classList.toggle("dark-mode");
+
+    });
+
+  </script>
+
+</body>
+</html>
